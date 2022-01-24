@@ -5,9 +5,9 @@ fn main() {
     let mut sum: usize = 0;
     for i in parsed_line {
         for c in i.chars() {
-            sum += sum + c.len_utf8();
+            sum = i.len() + std::mem::size_of::<char>();
         }
     }
-    println!("{}", sum);
+    println!("{:?}", sum);
 
 }
