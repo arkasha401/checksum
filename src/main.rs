@@ -1,13 +1,12 @@
-use std::env;
 
 fn main() {
-    let parsed_line = env::args().skip(1).collect::<Vec<_>>();
-    let mut sum: usize = 0;
-    for i in parsed_line {
-        for c in i.chars() {
-            sum = i.len() + std::mem::size_of::<char>();
-        }
+    let strofa: &str = "Deutchfrog";
+    let mut xor_sum = 0;
+    let mut add_sum = 0;
+    for i in strofa.chars(){
+        xor_sum = xor_sum + i as u32;
+        add_sum = add_sum ^ i as u32;
+        println!("{} {}", xor_sum, add_sum);
     }
-    println!("{:?}", sum);
 
 }
