@@ -1,7 +1,7 @@
 use std::env;
 
 fn main() {
-    let args: String = env::args().skip(1).collect();
+    let args: String = env::args().nth(1).unwrap();
 
     let mut xor_sum: u8 = 0;
     let mut add_sum: u16 = 0;
@@ -10,4 +10,5 @@ fn main() {
         add_sum = add_sum + i as u16;
     }
     println!("xor sum: {}; add_sum: {}", xor_sum, add_sum);
+    println!("{}", args);
 }
