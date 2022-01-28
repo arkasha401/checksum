@@ -1,12 +1,13 @@
+use std::env;
 
 fn main() {
-    let strofa: &str = "Deutch frog";
+    let args: String = env::args().skip(1).collect();
 
-    let mut xor_sum8: u8 = 0;
-    let mut add_sum8: u16 = 0;
-    for i in strofa.chars() {
-        xor_sum8 = xor_sum8 ^ i as u8;
-        add_sum8 = add_sum8 + i as u16;
+    let mut xor_sum: u8 = 0;
+    let mut add_sum: u16 = 0;
+    for i in args.chars() {
+        xor_sum = xor_sum ^ i as u8;
+        add_sum = add_sum + i as u16;
     }
-    println!("{} {}", xor_sum8, add_sum8)
+    println!("xor sum: {}; add_sum: {}", xor_sum, add_sum);
 }
