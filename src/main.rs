@@ -9,6 +9,6 @@ fn main() {
         xor_sum = xor_sum ^ i as u8;
         add_sum = add_sum + i as u16;
     }
-    println!("xor sum: {}; add_sum: {}", xor_sum, add_sum);
-    println!("{}", args);
+    println!("{:X} {:X}", xor_sum, add_sum);
+    println!("{}", xor_sum);
 }
