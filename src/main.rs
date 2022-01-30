@@ -11,7 +11,7 @@ fn main() {
             add_sum = add_sum + i as u16
         }
         println!("{:>0width$X}", add_sum, width = 2 )
-    } else if args.chars().last().unwrap().to_string() == "*" {
+    } else if args.chars().last().unwrap().to_string() == "^" {
         for i in args.chars() {
             xor_sum = xor_sum + i as u8
         }
