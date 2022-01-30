@@ -9,7 +9,7 @@ fn main() {
     for i in args.chars() {
         add_sum = add_sum + i as u16;   
         xor_sum = xor_sum + i as u16;
-        }
+    }
     println!("{:>0width$X} {:>0width$X}", add_sum, xor_sum, width = 2);
     if args.chars().last().unwrap().to_string() == "*"{
         println!("add")
