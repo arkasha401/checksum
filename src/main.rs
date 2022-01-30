@@ -14,7 +14,7 @@ fn main() {
         println!("{:>0width$X} {:>0width$X}", add_sum, xor_sum, width = 2);
         if arg.chars().last().unwrap() == '*' {
             if add_sum > 255{
-                add_sum -= 255;
+                add_sum -= 256;
             let d = format!("{}{:X}", arg, add_sum);
             println!("{}", d)
             } else {
@@ -22,12 +22,7 @@ fn main() {
                 println!("{}", d)
             }
         } else if arg.chars().last().unwrap() == '^' {
-            if xor_sum > 255 {
-                xor_sum -= 255;
-                let d = format!("{}{:X}", arg, add_sum);
-                println!("{}", d) 
-            } else {
-                let d = format!("{}{:X}", arg, add_sum);
+                let d = format!("{}{:X}", arg, xor_sum);
                 println!("{}", d) 
             }
         } else {
