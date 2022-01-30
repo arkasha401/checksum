@@ -16,6 +16,7 @@ fn main() {
     } else if args.chars().last().unwrap() == '^' {
         println!("xor")
     } else {
-        process::exit(0x0100)
+        eprintln!("Print ^ or * at the end of the line");
+        process::exit(1);
     }
 }    
