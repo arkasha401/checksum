@@ -22,6 +22,7 @@ fn main() {
         } else {
             eprintln!("Print ^ or * at the end of the line");
             process::exit(1);
-        }
-    }
+            }
+        }  
 }    
+
