@@ -18,7 +18,7 @@ fn main() {
         println!("{:>0width$X}", xor_sum, width = 2 )
 
     } else {
-        process::exit(0x100);
+        process::exit(0x0100);
     }    
 
 
