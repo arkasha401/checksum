@@ -24,7 +24,6 @@ fn main() {
         } else if arg.chars().last().unwrap() == '^' {
                 let d = format!("{}{:X}", arg, xor_sum);
                 println!("{}", d) 
-            }
         } else {
             eprintln!("Print ^ or * at the end of the line");
             process::exit(1);
