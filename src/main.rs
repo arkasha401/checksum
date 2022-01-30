@@ -11,9 +11,9 @@ fn main() {
         xor_sum = xor_sum + i as u8;
     }
     println!("{:>0width$X} {:>0width$X}", add_sum, xor_sum, width = 2);
-    if args.chars().last().unwrap().to_string() == "*"{
+    if args.chars().last().unwrap() == '*' {
         println!("add")
-    } else if args.chars().last().unwrap().to_string() == "^" {
+    } else if args.chars().last().unwrap() == '^' {
         println!("xor")
     } else {
         process::exit(0x0100)
