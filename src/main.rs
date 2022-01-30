@@ -9,7 +9,7 @@ fn main() {
     for arg in args{
         for i in arg.chars() {
             add_sum = add_sum + i as u16;   
-            xor_sum = xor_sum + i as u8;
+            xor_sum = xor_sum ^ i as u8;
         }
         println!("{:>0width$X} {:>0width$X}", add_sum, xor_sum, width = 2);
         if arg.chars().last().unwrap() == '*' {
