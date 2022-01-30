@@ -12,9 +12,13 @@ fn main() {
     }
     println!("{:>0width$X} {:>0width$X}", add_sum, xor_sum, width = 2);
     if args.chars().last().unwrap() == '*' {
-        println!("add")
+        println!("add");
+        let d = format!("{}{:x}", args, add_sum);
+        println!("{}", d)
     } else if args.chars().last().unwrap() == '^' {
-        println!("xor")
+        println!("xor");
+        let d = format!("{}{:x}", args, add_sum);
+        println!("{}", d)
     } else {
         eprintln!("Print ^ or * at the end of the line");
         process::exit(1);
