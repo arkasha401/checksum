@@ -14,7 +14,7 @@ fn main() {
             let d = format!("{}{:02X}", arg, add_sum as u8);
             println!("{}", d)
         } else if arg.chars().last().unwrap() == '^' {
-            let d = format!("{}{:02X}", arg, xor_sum as u8);
+            let d = format!("{}{:02X}", arg, xor_sum);
             println!("{}", d) 
         } else {
             eprintln!("Print ^ or * at the end of the line");
