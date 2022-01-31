@@ -12,7 +12,7 @@ fn main() {
             }
             println!("{}", add_sum);
             if arg.chars().last().unwrap() == '*' {
-                let d = format!("{}{:X}", arg, add_sum as u8);
+                let d = format!("{}{:02X}", arg, add_sum as u8);
                 println!("{}", d)
             } else if arg.chars().last().unwrap() == '^' {
                 let d = format!("{}{:X}", arg, xor_sum);
